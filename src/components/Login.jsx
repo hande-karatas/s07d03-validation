@@ -82,7 +82,7 @@ export default function Login() {
         });
     }
   };
-  
+
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -96,6 +96,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.email}
           invalid={!!errors.email}
+          data-cy="input-email"
         />
         {errors.email && <FormFeedback>{errors.email}</FormFeedback>}
       </FormGroup>
@@ -110,6 +111,7 @@ export default function Login() {
           onChange={handleChange}
           value={form.password}
           invalid={!!errors.password}
+          data-cy="input-password"
         />
         {errors.password && <FormFeedback>{errors.password}</FormFeedback>}
       </FormGroup>
@@ -129,7 +131,7 @@ export default function Login() {
       </FormGroup>
 
       <FormGroup className="text-center p-4">
-        <Button color="primary" disabled={!isValid}>
+        <Button color="primary" disabled={!isValid} data-cy="input-button">
           Sign In
         </Button>
       </FormGroup>
