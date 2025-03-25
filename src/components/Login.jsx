@@ -123,6 +123,7 @@ export default function Login() {
           checked={form.terms}
           type="checkbox"
           onChange={handleChange}
+          data-cy="input-check"
         />
         <Label htmlFor="terms" check>
           I agree to terms of service and privacy policy
